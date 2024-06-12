@@ -1,5 +1,6 @@
 import sys
 
+
 def main():
     try:
         if len(sys.argv) < 3:
@@ -10,7 +11,7 @@ def main():
                         print("I'm Even")
                         return 0
                     else:
-                        print ("I'm Odd")
+                        print("I'm Odd")
                         return 0
                 except ValueError:
                     raise AssertionError("argument is not an integer")
@@ -21,6 +22,6 @@ def main():
     except AssertionError as Err:
         print(f"AssertionError: {Err}")
 
+
 if __name__ == "__main__":
     main()
-

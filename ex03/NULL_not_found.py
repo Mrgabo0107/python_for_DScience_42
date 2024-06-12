@@ -1,5 +1,6 @@
 import math
 
+
 def NULL_not_found(obj: any) -> int:
     if obj is None:
         print(f"Nothing: {obj} {type(obj)}")
