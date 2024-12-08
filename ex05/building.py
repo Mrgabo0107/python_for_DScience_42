@@ -38,11 +38,8 @@ def main():
         if len(sys.argv) > 2:
             raise AssertionError("more than one argument is provided")
         elif len(sys.argv) == 1:
-            try:
-                text = input("What is the text to count?\n")
-                text += '\n'
-            except EOFError:
-                text = ""
+            print("What is the text to count?")
+            text = sys.stdin.readline()
         else:
             text = sys.argv[1]
         count(text)
