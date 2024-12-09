@@ -15,7 +15,7 @@ function accepts only alphanumeric characters and the space.
 Returns:
 - str: The Morse code representation of the input string.
 """
-    NESTED_MORSE = {" ": "/ ", "A": ".- ", "B": "-... ", "C": "-.-. ",
+    MORSE = {" ": "/ ", "A": ".- ", "B": "-... ", "C": "-.-. ",
                     "D": "-.. ", "E": ". ", "F": "..-. ", "G": "--. ",
                     "H": ".... ", "I": ".. ", "J": ".--- ", "K": "-.- ",
                     "L": ".-.. ", "M": "-- ", "N": "-. ", "O": "--- ",
@@ -33,7 +33,7 @@ Returns:
             string_to_encode = sys.argv[1].upper()
             encoded_string = ""
             for c in string_to_encode:
-                encoded_string += NESTED_MORSE[c]
+                encoded_string += MORSE[c]
             print(encoded_string)
     except AssertionError as Err:
         print(f"{Err}")
