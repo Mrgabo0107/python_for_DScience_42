@@ -1,4 +1,8 @@
 def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int | float]:
+    """
+    Takes a list of heights and a list of weights with the same number of 
+    elements and returns a list with the correspondent bmi. 
+    """
     if not isinstance(height, list) or not isinstance(weight, list):
         raise TypeError("The height and weight parameters must be a list")
     if len(height) != len(weight):
@@ -10,6 +14,9 @@ def give_bmi(height: list[int | float], weight: list[int | float]) -> list[int |
     return [w / (h ** 2) for h, w in zip(height, weight)]
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
+    """
+    Compares a list of bmp's with a value and decide if the bmp is under this value
+    """
     if not isinstance(bmi, list) or not all(isinstance(b, (int, float)) for b in bmi):
         raise TypeError("The bmi parameter must be a list of int or float")
     if not isinstance(limit, int):

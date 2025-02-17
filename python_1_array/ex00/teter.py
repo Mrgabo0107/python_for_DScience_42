@@ -1,0 +1,9 @@
+from give_bmi import give_bmi, apply_limit
+try:
+    height = [2.2,4]
+    weight = [165.3, 38.4]
+    bmi = give_bmi(height, weight)
+    print(bmi, type(bmi))
+    print(apply_limit(bmi, 26))
+except (ValueError, TypeError) as e:
+    print(f"--{e}--")
